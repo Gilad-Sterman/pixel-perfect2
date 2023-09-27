@@ -1,0 +1,42 @@
+@mixin for-mobile-layout {
+    @media (max-width: $break-narrow) {
+        @content;
+    }
+}
+
+@mixin for-narrow-layout {
+    @media (min-width: $break-narrow) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+    @media (min-width: $break-normal) {
+        @content;
+    }
+}
+
+@mixin for-wide-layout {
+    @media (min-width: $break-wide) {
+        @content;
+    }
+}
+
+@mixin layoutGTC($max) {
+    grid-template-columns:
+        minmax($layoutPadding, 1fr) minmax(auto, $max) minmax($layoutPadding, 1fr);
+}
+
+@mixin btn($color) {
+    padding: .5em;
+    width: 100px;
+    border-radius: 1.5em;
+    border: 1px solid $color;
+    background-color: rgba(255, 255, 255, 0);
+    color: $color;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $clr2;
+    }
+}

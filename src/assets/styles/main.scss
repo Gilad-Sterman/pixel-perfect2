@@ -1,0 +1,15 @@
+//SETUP
+@import 'setup/vars';
+@import 'setup/typography';
+@import 'setup/mixins';
+
+//BASICS
+@import 'base/base';
+@import 'base/layout';
+
+
+//CMPS
+@import 'cmps/AppHeader';
+@import 'cmps/BestTalent';
+@import 'cmps/SuccessStories.scss';
+@import 'cmps/GetStarted';

@@ -1,0 +1,70 @@
+.get-started {
+    position: relative;
+    background-color: $clr3;
+    text-align: center;
+    // padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 2rem;
+        color: $clr4;
+        max-width: 200px;
+    }
+
+    button {
+        font-size: 1rem;
+        font-weight: bold;
+        @include btn($clr4);
+        border: 2px solid $clr4;
+    }
+
+    img {
+        place-self: start;
+        margin-top: -2rem;
+        width: 40%;
+    }
+
+    @include for-narrow-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        justify-content: space-around;
+        padding: 1rem;
+
+        h1 {
+            max-width: max-content;
+            margin-inline-start: 3rem;
+            // justify-self: end;
+        }
+
+        button {
+            justify-self: center;
+        }
+
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 15%;
+        }
+
+    }
+
+    @include for-normal-layout {
+        img {
+            margin-top: -5rem;
+        }
+
+        h1 {
+            margin-inline-start: 7rem;
+        }
+    }
+
+    @include for-wide-layout {
+        h1 {
+            margin-inline-start: 10rem;
+        }
+    }
+
+}
